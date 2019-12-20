@@ -1,9 +1,9 @@
 #!/bin/bash
 
-hostIPAddress=$(sudo host test.test | sed -n "s/.*IPv4 address //p")
+hostIPAddress=$(sudo host vpn.kcshome.net | sed -n "s/.*IPv4 address //p")
 endpoint=$(sudo wg show wg0 endpoints | sed -n "s/^.*\s//p" | sed -n "s/:.*$//p")
-PUBLIC_KEY=YQFBWrpLk49iKjhCAPOJkHlPI+iJFbn1XK87Boz+UEI=
-ENDPOINT=test.test:51820
+PUBLIC_KEY=yN0O/kS97CjWYIt+moLfS46sHtGMhN00cCinAQd6g2c=
+ENDPOINT=vpn.kcshome.net:51820
 
 
 if [ "$hostIPAddress" == "$endpoint" ]
